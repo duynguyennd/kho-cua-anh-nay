@@ -26,7 +26,10 @@ export const CassettePlayer: React.FC<CassettePlayerProps> = ({ isPlaying, onTog
     { filename: "Khiem.mp3", displayName: "Khiêm" },
     { filename: "Người Đầu Tiên.mp3", displayName: "Người Đầu Tiên" },
     { filename: "Thằng Điên.mp3", displayName: "Thằng Điên" },
-    { filename: "Đừng Nghe Máy.mp3", displayName: "Đừng Nghe Máy" }
+    { filename: "Đừng Nghe Máy.mp3", displayName: "Đừng Nghe Máy" },
+    { filename: "we dont talk anymore demo vocal.mp3", displayName: "We Don't Talk Anymore (Demo Vocal)" },
+    { filename: "Không Thể Cùng Nhau Suốt Kiếp demo.mp3", displayName: "Không Thể Cùng Nhau Suốt Kiếp (Demo)" },
+    { filename: "chưa bao giờ demo.mp3", displayName: "Chưa Bao Giờ (Demo)" }
   ];
 
   // Update time display
