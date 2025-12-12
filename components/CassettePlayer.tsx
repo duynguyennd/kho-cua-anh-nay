@@ -313,20 +313,20 @@ export const CassettePlayer: React.FC<CassettePlayerProps> = ({ isPlaying, onTog
 
       {/* Song Selection Modal */}
       {showSongList && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowSongList(false)}>
-          <div className="bg-white rounded-2xl p-6 shadow-2xl max-w-md w-full text-center animate-float transform transition-all border-4 border-sky-300 relative" onClick={e => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4" onClick={() => setShowSongList(false)}>
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-2xl w-full sm:max-w-md text-center animate-float transform transition-all border-4 border-sky-300 relative h-screen sm:h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
             <button onClick={() => setShowSongList(false)} className="absolute top-2 right-2 text-gray-400 hover:text-red-500">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
-            <h3 className="text-xl font-bold text-sky-800 mb-4">Chọn Băng Nhạc</h3>
-            <div className="space-y-3">
+            <h3 className="text-lg sm:text-xl font-bold text-sky-800 mb-4">Chọn Băng Nhạc</h3>
+            <div className="flex-1 overflow-y-auto space-y-3">
               {songs.map((song, index) => (
                 <button
                   key={index}
                   onClick={() => handleSongSelect(song.filename, song.displayName)}
-                  className="w-full bg-sky-100 hover:bg-sky-200 text-sky-700 border-2 border-sky-300 px-4 py-3 rounded-lg font-bold shadow-md transition-all hover:-translate-y-1 flex items-center justify-center gap-2"
+                  className="w-full bg-sky-100 hover:bg-sky-200 text-sky-700 border-2 border-sky-300 px-3 sm:px-4 py-3 rounded-lg font-bold shadow-md transition-all hover:-translate-y-1 flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
                   <span>{song.displayName}</span>
                 </button>
               ))}

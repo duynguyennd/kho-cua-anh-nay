@@ -13,6 +13,10 @@
 ## Characters.tsx Enhancements
 - [x] Add speech bubbles that appear on click with cute messages for Nick and Judy
 
+## CassettePlayer.tsx Enhancements
+- [x] Add scrolling to song list if too many songs
+- [x] Optimize interface for mobile devices
+
 ## Followup Steps
 - [x] Test animations for smoothness and performance on different devices
 - [x] Ensure animations are not overwhelming and align with the cute theme
