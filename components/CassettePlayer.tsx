@@ -313,8 +313,8 @@ export const CassettePlayer: React.FC<CassettePlayerProps> = ({ isPlaying, onTog
 
       {/* Song Selection Modal */}
       {showSongList && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4" onClick={() => setShowSongList(false)}>
-          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-2xl w-full sm:max-w-md text-center animate-float transform transition-all border-4 border-sky-300 relative h-screen sm:h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex p-2 sm:p-4" onClick={() => setShowSongList(false)}>
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-2xl w-full sm:max-w-md text-center animate-float transform transition-all border-4 border-sky-300 relative h-screen sm:h-[80vh] flex flex-col m-auto" onClick={e => e.stopPropagation()}>
             <button onClick={() => setShowSongList(false)} className="absolute top-2 right-2 text-gray-400 hover:text-red-500">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
